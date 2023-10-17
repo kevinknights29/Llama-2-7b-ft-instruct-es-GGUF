@@ -6,3 +6,7 @@ bandit
 python-dotenv
 huggingface_hub
 click
+transformers
+
+# llama.cpp
+-r llama.cpp/requirements.txt
