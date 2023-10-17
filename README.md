@@ -51,6 +51,25 @@ This project aims to convert clibrain/Llama-2-7b-ft-instruct-es model into a com
 ### Results:
 <img width="1785" alt="Screenshot 2023-10-16 at 10 52 32 PM" src="https://github.com/kevinknights29/Llama-2-7b-ft-instruct-es-GGUF/assets/74464814/6dcd1c1b-c71e-4e28-ac54-23c20c61abac">
 
+## Getting Started
+
+To download the model `clibrain/Llama-2-7b-ft-instruct-es`, run:
+
+```bash
+python scripts/download_hf_model.py clibrain/Llama-2-7b-ft-instruct-es
+```
+
+It should take around 20min to download (based on your internet speed)
+
+<img width="1785" alt="image" src="https://github.com/kevinknights29/Llama-2-7b-ft-instruct-es-GGUF/assets/74464814/3ee3846f-f2b3-4f73-b99e-5716658bcedc">
+
+After, you can check files with:
+```bash
+ls -lhia models/Llama-2-7b-ft-instruct-es/
+```
+
+<img width="1785" alt="image" src="https://github.com/kevinknights29/Llama-2-7b-ft-instruct-es-GGUF/assets/74464814/13599a15-e502-47c7-983e-dcba847e733a">
+
 ## Contributing
 
 ### Installing pre-commit

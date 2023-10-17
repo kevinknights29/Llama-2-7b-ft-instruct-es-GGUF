@@ -1,6 +1,8 @@
 # Project
 ## Models
 models/
+## Pre-commit Hooks
+.ruff_cache/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
