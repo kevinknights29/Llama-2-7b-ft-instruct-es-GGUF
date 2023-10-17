@@ -31,7 +31,6 @@ MODELS_DIR = os.path.join(APP_DIR, "models")
 
 
 def _create_model_path(model_id: str, model_dir: Path) -> Path:
-    print(model_dir)
     model_name = model_id.split("/")[-1]
     model_path = model_dir / model_name
     model_path.mkdir(parents=True, exist_ok=True)
