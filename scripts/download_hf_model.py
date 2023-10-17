@@ -25,7 +25,7 @@ _ = load_dotenv(find_dotenv())
 HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN")
 
 # Constants
-SCRIPTS_DIR = os.path.dirname(os.getcwd())
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 APP_DIR = os.path.dirname(SCRIPTS_DIR)
 MODELS_DIR = os.path.join(APP_DIR, "models")
 
