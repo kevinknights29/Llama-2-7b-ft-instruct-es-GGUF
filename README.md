@@ -5,7 +5,9 @@ This project aims to convert clibrain/Llama-2-7b-ft-instruct-es model into a com
 **Content**
 
 1. [Setup](#setup)
-2. [Contributing](#contributing)
+2. [Getting Started](#getting-started)
+3. [GGUF Conversion](#gguf-conversion)
+4. [Contributing](#contributing)
 
 ---
 
@@ -69,6 +71,39 @@ ls -lhia models/Llama-2-7b-ft-instruct-es/
 ```
 
 <img width="1785" alt="image" src="https://github.com/kevinknights29/Llama-2-7b-ft-instruct-es-GGUF/assets/74464814/13599a15-e502-47c7-983e-dcba847e733a">
+
+## GGUF Conversion
+
+To convert models to a compatible GGUF file for llama.cpp, run:
+```bash
+cd llama.cpp/examples && \
+python make-ggml.py ../../models/Llama-2-7b-ft-instruct-es \
+  --model_type 'llama' \
+  --outname 'llama-v2-7b-ft-instruct-es' \
+  --outdir ../../models/Llama-2-7b-ft-instruct-es-GGUF \
+  --quants 'Q5_K_M'
+```
+
+### Recommend quants options
+
+- Q4_K: alias for Q4_K_M
+- Q4_K_M: medium, balanced quality
+- Q5_K: alias for Q5_K_M
+- Q5_K_S: large, low quality loss
+- Q5_K_M: large, very low quality loss
+
+### Other available quants options
+
+- Q2_K: smallest, extreme quality loss - not recommended
+- Q3_K: alias for Q3_K_M
+- Q3_K_S: very small, very high quality loss
+- Q3_K_M: very small, very high quality loss
+- Q3_K_L: small, substantial quality loss
+- Q4_K_S: small, significant quality loss
+- Q6_K: very large, extremely low quality loss
+- Q8_0: very large, extremely low quality loss - not recommended
+- F16: extremely large, virtually no quality loss - not recommended
+- F32: absolutely huge, lossless - not recommended
 
 ## Contributing
 
